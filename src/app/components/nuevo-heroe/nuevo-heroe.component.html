@@ -1,0 +1,36 @@
+<form class="row g-3" [formGroup]="formIngreso" (ngSubmit)="onSubmit()">
+    <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Ciudad Origen</label>
+    <input type="email" class="form-control" id="inputEmail4" formControlName="ciudadOrigen">
+    </div>
+    <div class="col-12">
+    <label for="inputAddress" class="form-label">Ciudad Destino</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="ciudadDestino"></textarea>
+    </div>
+    <div class="col-12">
+    <label for="inputAddress2" class="form-label">Precio</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="precio"></textarea>
+    </div>
+    <div class="col-12">
+        <label for="inputAddress2" class="form-label">Descripcion</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="descripcion"></textarea>
+        </div>
+    <div class="col-md-4">
+    <label for="inputState" class="form-label">Tipo</label>
+    <select id="inputState" class="form-select" formControlName="tipo">
+        <option>Otros</option>
+        <option>Interno</option>
+        <option>Externo</option>
+    </select>
+    </div>
+
+    <div class="image-container">
+        <input type="text" formControlName="img" placeholder="Ingrese enlace de la imagen">
+        <button (click)="mostrarImagen()">Mostrar Imagen</button>
+        <div #imagePreview id="image-preview"></div>
+      </div>
+    
+    <div class="col-12">
+    <button type="submit" class="btn btn-primary">Agregar</button>
+    </div>
+</form>

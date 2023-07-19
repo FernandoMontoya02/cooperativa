@@ -1,0 +1,22 @@
+<h1>Centinela <small>Rutas del Ecuador</small></h1>
+<hr>
+
+<div class="col animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://scontent.fmch2-1.fna.fbcdn.net/v/t1.6435-9/69279126_1346255275527322_769425107402620928_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=973b4a&_nc_ohc=hN9rhbR5ECUAX8Q4RQo&_nc_ht=scontent.fmch2-1.fna&oh=00_AfDxjpYgaQERDxNK1tlFRtzO1JPYREEYAz6ZpCDO86lY7A&oe=64DFD2C5" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ heroe.ciudadOrigen }}</h5>
+          <p class="card-text">{{ heroe.ciudadDestino }}</p>
+          <p class="card-text"><small class="text-body-secondary">{{ heroe.precio }}</small></p>
+          <p class="card-text"><small class="text-body-secondary">{{ heroe.descripcion }}</small></p>
+          <p class="card-text"><small class="text-body-secondary">{{ heroe.tipo }}</small></p>
+          <button (click)="verHeroe(i)" type="button" class="btn btn-primary">Ver más</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

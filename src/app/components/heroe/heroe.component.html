@@ -1,0 +1,22 @@
+<h1>Nombre del heroe <small>fecha de aparición</small>></h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img src="https://scontent.fmch2-1.fna.fbcdn.net/v/t39.30808-6/215012275_1865004367010526_1589860083838402567_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeFslC6XBTQUcRN5Gn72Pbb7NJry9uXHEws0mvL25ccTC_WHb51nzJ6wHx9e3oJ2E4NAv0p5YTCfofZd0rWoX0dJ&_nc_ohc=p0O1X5lGfY4AX_6LzDK&_nc_ht=scontent.fmch2-1.fna&oh=00_AfAhrNF5A3NFV1wpDRUXaY6ZciJD1PL27IW8uqwLYovP1Q&oe=64BD5750" alt="" class="hero-image">
+        <br><br>
+        <a [routerLink]="['/heroes']" class="btn btn btn-outline-danger btn-block"> Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h1> {{heroe.ciudadOrigen}}</h1>
+        <br>
+        <p>
+            {{heroe.descripcion}}
+        </p>
+        <div *ngIf="heroe.tipo === 'Externo'; else Interno">
+            <img src="https://i.prcdn.co/img?regionKey=HnQYtm9gsEZV5DANeNDTEA%3D%3D" width="400" height="300" alt="">
+          </div>
+          <ng-template #Interno>
+            <img src="https://www.ucr.ac.cr/medios/fotos/2015/imagen155d636361c6d9.png" width="400" height="300" alt="">
+          </ng-template>
+    </div>
+</div>
